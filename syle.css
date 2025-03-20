@@ -1,0 +1,521 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow');
+
+body{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	text-align: center;
+	margin: 1em auto;
+}
+
+/* Меню агента */
+
+.partnermenu {
+    margin-bottom: 1.2em;
+}
+
+.partnermenu a {
+	color: black;
+    margin: 1.2em;
+}
+
+/****************************************************************************************/
+
+/* Кнопки */
+
+.buttonsblock a {
+    display: inline-block;
+    min-width: 12em;
+	border: 1px solid #e61c0a;
+	font-size: 1em;
+	font-weight: normal;
+	display: inline-block;
+	color: white;
+	cursor: pointer;
+	padding: 0.8em 1.8em;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #e11111;
+	text-decoration: none;
+    margin: 1em;
+}
+
+.buttonsblock a:hover {
+	background: red;
+}
+
+.buttonsblock a:active {
+	border-color: #53d61a;
+	background: red;
+}
+
+/*------------------------------------*\
+    #tourlist.php
+\*------------------------------------*/
+
+.tourlist {
+	text-align: right;
+}
+
+/*------------------------------------*\
+    #calendar.php
+\*------------------------------------*/
+
+.monthblock {
+	text-align: center;
+}
+.month {
+	display: inline-block;
+}
+.ui-datepicker {
+	color: #fff;
+    background: #df8200;
+	border: none;
+	padding: 0;
+	width: auto;
+}
+.ui-datepicker.ui-widget.ui-widget-content {
+	border: none;
+}
+.ui-datepicker-header {
+	color: #fff;
+	background: red;
+	border: none;
+	margin: 0;
+}
+.ui-datepicker-prev {
+	cursor: pointer;
+}
+.ui-datepicker-next {
+	cursor: pointer;
+}
+.ui-datepicker-title {
+	margin: 0;
+}
+.month th {
+	text-align: center;
+	vertical-align: middle;
+	background: #ec8e00;
+	border: none;
+}
+.month th span {
+	color: #fff;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	background: none;
+	border: none;
+	text-align: center;
+	vertical-align: middle;
+	color: #fff;
+	width: 2.2em;
+}
+.ui-datepicker-calendar .ui-state-default {
+	background: none;
+	color: #fff;
+	border: none;
+	padding: 0.5em 0;
+}
+.ui-datepicker-unselectable .ui-state-default {
+	background: none;
+	color: #995300;
+}
+.ui-datepicker-calendar .ui-state-hover {
+	background: #fff;
+	color: #995300;
+}
+.ui-datepicker-calendar .ui-state-active {
+	background: #fff;
+	color: #995300;
+}
+
+.calendar .selecteddate {
+	display: none;
+}
+
+.calendar .pretime {
+	margin: 1.2em;
+}
+.calendar .timelist { /* список времени (вариант комбобокса) */
+    width: 100px;
+	font-size: 1.3em;
+    text-align: center;
+}
+.calendar .timeitem {
+	margin: 0.8em;
+	cursor: pointer;
+}
+
+/* стилизация radio */
+
+.calendar .radio {
+    display: none;
+}
+
+.calendar .radio-custom {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+	box-shadow: 0 0 0 2px #404040;
+    border: 3px solid red;
+    border-radius: 50%;
+    background: #fff;
+    vertical-align: middle;
+	margin: 2px;
+}
+.calendar .label{
+    display: inline-block;
+    vertical-align: middle;
+	/*font: 700 16px/24px CoreSansGS;*/
+    margin-left: 5px;
+}
+.calendar .radio:checked  + .radio-custom{
+    background: blue;
+}
+
+.calendar .freeplaces {
+    color: blue;
+	margin: 1.2em;
+}
+
+/*------------------------------------*\
+    #places.php
+\*------------------------------------*/
+
+.places .tourname, .places .date, .places .time {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+    display: inline-block;
+	margin: 4px;
+}
+.places .date::before {
+	content: " на ";
+}
+.places .time::before {
+	content: " в ";
+}
+.places .placesblock {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+	margin: 1.6em;
+}
+.places .placeitem {
+	flex-basis: 14em;
+    display: inline-block;
+}
+.places .placeitemlabel {
+    margin: 0.8em;
+}
+.places .placeiteminput {
+    width: 100px;
+    max-width: 100%;
+    margin: 0 auto;
+	font-size: 1.3em;
+    text-align: center;
+}
+
+.places .promocodesinfo::before {
+	content: "";
+}
+.places .promocodes {
+	font-size: 1.5em;
+    text-align: center;
+}
+.places .promocodeinput {
+	font-size: 1.3em;
+    text-align: center;
+	width: 15em;
+    vertical-align: middle;
+}
+.places .promocodesblock .buttonsblock {
+	display: inline-block;
+}
+.places .promocodebtnclear {
+	min-width: unset;
+	width: 3.6em;
+}
+.places .totalpricevalue {
+	margin: 1.4em;
+	font-size: 1.5em;
+}
+
+/*------------------------------------*\
+    #cartaddits.php
+\*------------------------------------*/
+
+.cartaddits .header {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+    margin-bottom: 1.4em;
+}
+.cartaddits .item {
+    margin: 0.8em 0;
+}
+.cartaddits .item .name {
+    display: inline-block;
+    margin: 0.8em 0;
+}
+.cartaddits .item .value {
+    text-align: center;
+}
+.cartaddits input {
+	font-size: 1.3em;
+	height: 2.5em;
+	width:14em;
+	text-align: center;
+    vertical-align: middle;
+}
+.cartaddits textarea {
+	font-size: 1.5em;
+	width: 22em;
+}
+
+/*------------------------------------*\
+    #transferpoints.php
+\*------------------------------------*/
+
+.transferpoints .header {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+    margin-bottom: 1.4em;
+}
+
+.transferpoints .outpoint {
+    display: inline-block;
+	margin: 1em;
+}
+.transferpoints .targetpoint {
+    display: inline-block;
+	margin: 1em;
+}
+.transferpoints .item {
+    margin: 0.8em 0;
+}
+.transferpoints .item .name {
+    display: inline-block;
+    margin: 0.8em 0;
+}
+.transferpoints .item .value {
+    text-align: center;
+}
+.transferpoints select {
+	font-size: 1.3em;
+	height: 2.5em;
+	width: 22em;
+    vertical-align: middle;
+}
+.transferpoints #outpointmap {
+	display: inline-block;
+}
+.transferpoints #targetpointmap {
+	display: inline-block;
+}
+
+/*------------------------------------*\
+    #transferdates.php
+\*------------------------------------*/
+
+.transferdates .header {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+    margin-bottom: 1.4em;
+}
+
+/* стилизация radio */
+
+.transferdates .radio {
+    display: none;
+}
+
+.transferdates .radio-custom {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+	box-shadow: 0 0 0 2px #404040;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    vertical-align: middle;
+	margin: 2px;
+}
+.transferdates .label{
+    display: inline-block;
+    vertical-align: middle;
+	/*font: 700 16px/24px CoreSansGS;*/
+    margin-left: 5px;
+}
+.transferdates .radio:checked  + .radio-custom{
+    background: black;
+}
+
+.transferdates .freeplaces {
+    color: black;
+	margin: 1.2em;
+}
+
+/*------------------------------------*\
+    #outpoint.php
+\*------------------------------------*/
+
+.outpoint .header {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+    margin-bottom: 1.4em;
+}
+.outpoint .item {
+    margin: 0.8em 0;
+}
+.outpoint .item .name {
+    display: inline-block;
+    margin: 0.8em 0;
+}
+.outpoint .item .value {
+    text-align: center;
+}
+.outpoint select {
+	font-size: 1.3em;
+	height: 2.5em;
+	width: 28em;
+    vertical-align: middle;
+}
+.outpoint input {
+	font-size: 1.3em;
+	height: 2.5em;
+	width: 32em;
+    vertical-align: middle;
+}
+
+/*------------------------------------*\
+    #clients.php
+\*------------------------------------*/
+
+.clients .header {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+}
+.clients .item {
+    margin: 10px 0;
+}
+.clients .item .name {
+    display: inline-block;
+    margin: 10px 0;
+}
+.clients .item .value {
+    text-align: center;
+}
+.clients input {
+	font-size: 1.3em;
+	height: 2.5em;
+	width:14em;
+	text-align: center;
+    vertical-align: middle;
+}
+
+/*------------------------------------*\
+    #outpoint.php
+\*------------------------------------*/
+
+/*------------------------------------*\
+    #targetpoint.php
+\*------------------------------------*/
+
+/*------------------------------------*\
+    #confirm.php
+\*------------------------------------*/
+
+.confirm .header {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+}
+.confirm .tourname, .confirm .date, .confirm .time, .confirm .backtourname, .confirm .backdate, .confirm .backtime {
+    display: inline-block;
+	font-size: 1.5em;
+	margin: 4px;
+}
+.confirm .backtourname::before {
+	content: "Возвращение: ";
+}
+.confirm .date::before, .confirm .backdate::before {
+	content: " на ";
+}
+.confirm .time::before, .confirm .backtime::before {
+	content: " в ";
+}
+.confirm .infoblock {
+	margin: 2.5em auto;
+	text-align: left;
+	max-width: 24em;
+}
+.confirm .infoblock div {
+	margin: 4px;
+	vertical-align: middle;
+}
+
+.confirm .item .name::after {
+	content: ": ";
+}
+.confirm .item .name {
+    display: inline-block;
+}
+.confirm .item .value {
+    display: inline-block;
+	font-size: 1.5em;
+	margin-left: 0.8em;
+}
+.confirm .item .notes .value {
+    display: block;
+}
+
+.confirm form {
+	margin: 0;
+}
+
+.confirm .agreement {
+	margin: 8px 0;
+}
+.confirm input[type="checkbox"] {
+	height: 25px;
+	width: 25px;
+	vertical-align: middle;
+}
+
+/*------------------------------------*\
+    #login.php
+\*------------------------------------*/
+
+.login .header {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+}
+.login .item {
+    margin: 0.8em 0;
+}
+.login .item .name {
+    display: inline-block;
+    margin: 0.8em 0;
+}
+.login .item .value {
+    text-align: center;
+}
+.login input {
+	font-size: 1.3em;
+	height: 2.5em;
+	width: 90%;
+	max-width: 14em;
+	text-align: center;
+    vertical-align: middle;
+	border: 1px solid silver;
+}
+.login select {
+	font-size: 1.3em;
+	height: 2.5em;
+	width: 90%;
+    vertical-align: middle;
+	border: 1px solid silver;
+}
+.login input[type="checkbox"] {
+	width: 1em;
+}
